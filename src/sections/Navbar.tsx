@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { cx } from '../lib/cx'
-import { GITHUB_URL } from '../config/site'
+import { LINKEDIN_URL } from '../config/site'
 import { LogoMark, Wordmark } from '../components/Logo'
 import { ButtonLink } from '../components/Button'
-import { IconClose, IconGithub, IconMenu } from '../components/icons'
+import { IconClose, IconLinkedin, IconMenu } from '../components/icons'
 
 const NAV_LINKS = [
   { label: 'About', href: '#about' },
@@ -19,7 +19,6 @@ export function Navbar() {
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState<string | null>(null)
 
-  /* Translucent bar once the page scrolls. */
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
     onScroll()
@@ -27,7 +26,6 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  /* Scroll-spy: highlight the nav item for the section in view. */
   useEffect(() => {
     const els = SECTION_IDS.map((id) => document.getElementById(id)).filter(
       (el): el is HTMLElement => el !== null,
@@ -46,7 +44,6 @@ export function Navbar() {
     return () => observer.disconnect()
   }, [])
 
-  /* Close the mobile menu on Escape. */
   useEffect(() => {
     if (!open) return
     const onKey = (e: KeyboardEvent) => {
@@ -89,17 +86,20 @@ export function Navbar() {
             </a>
           ))}
 
-          <span aria-hidden className="mx-2 h-4 w-px bg-edge" />
-
-          <a
-            href={GITHUB_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-none px-3 py-2 text-[0.86rem] font-medium text-mist transition-colors hover:text-white"
-          >
-            <IconGithub className="h-4 w-4" />
-            GitHub
-          </a>
+          {LINKEDIN_URL ? (
+            <>
+              <span aria-hidden className="mx-2 h-4 w-px bg-edge" />
+              <a
+                href={LINKEDIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-none px-3 py-2 text-[0.86rem] font-medium text-mist transition-colors hover:text-white"
+              >
+                <IconLinkedin className="h-4 w-4" />
+                LinkedIn
+              </a>
+            </>
+          ) : null}
         </div>
 
         <div className="hidden md:block">
@@ -134,15 +134,17 @@ export function Navbar() {
               </a>
             ))}
             <div className="my-2 h-px bg-edge/70" />
-            <a
-              href={GITHUB_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-none px-3 py-2.5 text-[0.95rem] font-medium text-fog transition-colors hover:bg-white/[0.04] hover:text-white"
-            >
-              <IconGithub className="h-4 w-4" />
-              GitHub
-            </a>
+            {LINKEDIN_URL ? (
+              <a
+                href={LINKEDIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-none px-3 py-2.5 text-[0.95rem] font-medium text-fog transition-colors hover:bg-white/[0.04] hover:text-white"
+              >
+                <IconLinkedin className="h-4 w-4" />
+                LinkedIn
+              </a>
+            ) : null}
             <ButtonLink href="#contact" className="mt-2 w-full" onClick={() => setOpen(false)}>
               Get in Touch
             </ButtonLink>

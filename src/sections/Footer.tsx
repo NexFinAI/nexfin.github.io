@@ -1,6 +1,6 @@
-import { CONTACT_URL, GITHUB_URL, LINKEDIN_URL, SITE_TAGLINE } from '../config/site'
+import { CONTACT_URL, LINKEDIN_URL, SITE_TAGLINE } from '../config/site'
 import { LogoMark, Wordmark } from '../components/Logo'
-import { IconGithub, IconLinkedin, IconMail } from '../components/icons'
+import { IconLinkedin, IconMail } from '../components/icons'
 
 interface FooterLink {
   label: string
@@ -17,9 +17,9 @@ const RESEARCH_LINKS: FooterLink[] = [
 ]
 
 const PROJECT_LINKS: FooterLink[] = [
-  { label: 'Open Source', href: '#projects' },
+  { label: 'Our Work', href: '#projects' },
   { label: 'Publications', href: '#projects' },
-  { label: 'GitHub', href: GITHUB_URL, external: true },
+  { label: 'Approach', href: '#methodology' },
 ]
 
 const CONNECT_LINKS: FooterLink[] = [
@@ -30,7 +30,7 @@ const CONNECT_LINKS: FooterLink[] = [
 
 const DISCLAIMER = [
   "NexfinAI's research and publications are provided for informational, educational, and research purposes only. Unless explicitly stated otherwise, they do not constitute investment advice, financial advice, or a recommendation to buy or sell any asset.",
-  'Backtested and simulated results have limitations and do not guarantee future performance. Digital asset markets involve substantial risk, and research findings should not be interpreted as evidence of guaranteed profitability.',
+  'Backtested and simulated results have limitations and do not guarantee future performance. Digital asset, prediction, foreign exchange, and commodity markets involve substantial risk, and research findings should not be interpreted as evidence of guaranteed profitability.',
   "The nature and scope of NexfinAI's activities will be described accurately as its research and engineering work develops.",
 ]
 
@@ -78,19 +78,10 @@ export function Footer() {
               <Wordmark />
             </a>
             <p className="mt-4 max-w-xs text-[0.875rem] leading-relaxed text-mist">
-              {SITE_TAGLINE}. Independent research at the intersection of AI, quantitative finance,
-              and digital asset markets.
+              {SITE_TAGLINE}. Independent quantitative research and technology at the intersection
+              of AI and modern financial markets.
             </p>
             <div className="mt-5 flex items-center gap-2">
-              <a
-                href={GITHUB_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-none border border-edge text-mist transition-colors hover:border-signal/40 hover:text-white"
-              >
-                <IconGithub className="h-[17px] w-[17px]" />
-              </a>
               {LINKEDIN_URL ? (
                 <a
                   href={LINKEDIN_URL}

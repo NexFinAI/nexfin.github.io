@@ -19,33 +19,34 @@ const AREAS: Area[] = [
       'We investigate how artificial intelligence and quantitative methods can improve the discovery, development, and evaluation of trading strategies.',
     ],
     interests: [
-      'AI agents for financial research and experimentation',
-      'Knowledge-guided alpha discovery',
+      'AI-assisted research workflows',
       'Quantitative signal and factor research',
-      'Automated hypothesis generation and evaluation',
+      'Systematic hypothesis generation and evaluation',
       'Statistical validation and robustness analysis',
       'Reproducible quantitative research workflows',
+      'AI for financial data analysis',
     ],
     closing:
       'Our objective is to investigate whether AI can help researchers explore financial hypotheses more efficiently without compromising empirical rigor.',
   },
   {
     index: '02',
-    title: 'Crypto, DeFi & On-Chain Intelligence',
-    tagline: 'Understanding the mechanisms behind digital asset markets.',
+    title: 'Cross-Market Intelligence',
+    tagline: 'Understanding behavior across crypto, prediction markets, forex, and gold.',
     paragraphs: [
-      'Blockchain networks and decentralized financial protocols create new sources of data for studying market behavior, liquidity, and financial activity.',
-      'We explore quantitative approaches to analyzing these systems and investigating potential market signals.',
+      'We study market behavior across digital assets, prediction markets, foreign exchange, and precious metals.',
+      'We explore quantitative approaches to analyzing liquidity, market structure, and cross-asset dynamics in these markets.',
     ],
     interests: [
-      'Digital asset market microstructure',
-      'On-chain activity and transaction flows',
-      'Liquidity dynamics and decentralized exchanges',
-      'DeFi protocol activity and market structure',
-      'Data-driven analysis of digital asset markets',
-      'Empirical evaluation of on-chain trading hypotheses',
+      'Crypto and digital asset market microstructure',
+      'Prediction market dynamics and event pricing',
+      'Foreign exchange liquidity and macro flows',
+      'Gold and precious metals market behavior',
+      'Cross-asset signal research',
+      'Data-driven analysis of market structure',
     ],
-    closing: 'We aim to turn complex blockchain and market data into structured, testable research questions.',
+    closing:
+      'We aim to turn complex market data into structured, testable research questions.',
   },
   {
     index: '03',
@@ -61,7 +62,7 @@ const AREAS: Area[] = [
       'Execution-aware simulation',
       'Transaction cost and slippage modeling',
       'Portfolio construction and risk management',
-      'Automated trading infrastructure',
+      'Systematic trading infrastructure',
     ],
     closing:
       'Our long-term goal is to develop systems in which research, validation, and execution are connected through transparent and measurable processes.',
@@ -76,7 +77,7 @@ export function ResearchAreas() {
           <SectionHeading
             eyebrow="Research"
             title="Research Areas"
-            description="Three connected directions — from intelligent discovery, through digital-asset market science, to the engineering of systematic trading systems."
+            description="Three connected directions — from intelligent discovery, through cross-market analysis, to the engineering of systematic trading systems."
           />
         </Reveal>
 

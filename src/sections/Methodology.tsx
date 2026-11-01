@@ -25,7 +25,7 @@ const STEPS = [
   {
     index: '05',
     title: 'Document',
-    body: 'Publish methods, implementation details, findings, and limitations so results can be independently examined and reproduced.',
+    body: 'Document methods, assumptions, findings, and limitations so results can be reviewed and reproduced.',
   },
 ]
 

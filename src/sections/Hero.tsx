@@ -4,7 +4,7 @@ import { Scramble } from '../components/Scramble'
 import { IconArrowRight, IconLayers } from '../components/icons'
 import { HeroVisual } from './HeroVisual'
 
-const TOPICS = ['AI Research', 'Quant Finance', 'Digital Assets']
+const TOPICS = ['AI Research', 'Quant Finance', 'Crypto', 'Prediction Markets', 'Forex & Gold']
 
 const ETHOS = ['Research-driven', 'Engineering-focused', 'Evidence-based']
 
@@ -21,7 +21,7 @@ export function Hero() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-signal opacity-60" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-signal" />
                 </span>
-                Independent research &amp; engineering initiative
+                Quantitative research &amp; technology
               </p>
             </Reveal>
 
@@ -44,13 +44,14 @@ export function Hero() {
 
             <Reveal delay={200}>
               <p className="mt-4 max-w-lg text-pretty text-[0.95rem] leading-relaxed text-mist">
-                We explore how artificial intelligence, quantitative methods, and on-chain data can
-                advance financial research and systematic trading.
+                We explore how artificial intelligence and quantitative methods can advance
+                financial research and systematic trading across crypto, prediction markets, forex,
+                and gold.
               </p>
               <p className="mt-3 max-w-lg text-pretty text-[0.95rem] leading-relaxed text-mist">
-                Our work focuses on discovering quantitative signals, investigating digital asset
-                markets, and developing intelligent research systems through rigorous
-                experimentation and open-source engineering.
+                Our work focuses on discovering quantitative signals, investigating market behavior,
+                and developing intelligent research systems through rigorous experimentation and
+                disciplined engineering.
               </p>
             </Reveal>
 
@@ -82,7 +83,7 @@ export function Hero() {
                   variant="secondary"
                   icon={<IconLayers className="h-4 w-4" />}
                 >
-                  View Our Projects
+                  View Our Work
                 </ButtonLink>
               </div>
             </Reveal>

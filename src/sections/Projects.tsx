@@ -1,16 +1,16 @@
-import { GITHUB_URL, LINKEDIN_URL } from '../config/site'
+import { LINKEDIN_URL } from '../config/site'
 import { ButtonLink } from '../components/Button'
 import { Reveal } from '../components/Reveal'
 import { SectionHeading } from '../components/SectionHeading'
 import { Tag } from '../components/Tag'
-import { IconArrowRight, IconGithub, IconLinkedin } from '../components/icons'
+import { IconArrowRight, IconLinkedin } from '../components/icons'
 
-const OPEN_SOURCE_SUPPORT = [
-  'Reproducible financial experiments',
-  'Transparent strategy evaluation',
-  'Reusable research infrastructure',
+const FOCUS_AREAS = [
+  'Reproducible internal research',
+  'Transparent evaluation standards',
+  'Robust research infrastructure',
   'AI-assisted quantitative workflows',
-  'Collaboration between AI engineering and quantitative finance',
+  'Selective public releases when appropriate',
 ]
 
 const PUBLICATION_PIPELINE = [
@@ -28,33 +28,33 @@ export function Projects() {
         <Reveal>
           <SectionHeading
             eyebrow="Projects & Research"
-            title="Open Research. Reproducible Results."
-            description="We believe open-source software and reproducible research can improve the quality of financial technology."
+            title="Proprietary Research. Rigorous Results."
+            description="We believe disciplined, reproducible research and robust engineering are the foundation of reliable financial technology."
           />
         </Reveal>
 
         <div className="mt-12 grid gap-5 lg:grid-cols-2">
-          {/* Open source */}
+          {/* Proprietary research */}
           <Reveal delay={80}>
             <article className="flex h-full flex-col rounded-none border border-edge bg-panel/50 p-6 md:p-8">
               <div className="flex items-center justify-between gap-3">
                 <h3 className="text-[1.15rem] font-semibold tracking-tight text-white">
-                  Open-Source Research &amp; Engineering
+                  Proprietary Research &amp; Engineering
                 </h3>
-                <Tag tone="signal">Open source</Tag>
+                <Tag tone="signal">Closed source</Tag>
               </div>
 
               <p className="mt-4 text-[0.9rem] leading-relaxed text-mist">
-                Where practical, we share our implementations, experiments, documentation, and
-                technical findings to make our work accessible to researchers, developers, and the
-                broader quantitative finance community.
+                Our core research, models, and trading systems are developed in-house. We prioritize
+                methodological rigor, data quality, and engineering discipline over public
+                disclosure of implementation details.
               </p>
 
               <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.24em] text-mist">
-                Our open-source work aims to support
+                Our work aims to support
               </p>
               <ul className="mt-3 space-y-2.5">
-                {OPEN_SOURCE_SUPPORT.map((item) => (
+                {FOCUS_AREAS.map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
                     <span aria-hidden className="mt-[7px] h-1 w-1 shrink-0 rotate-45 bg-signal/70" />
                     <span className="text-[0.87rem] leading-relaxed text-fog">{item}</span>
@@ -64,16 +64,15 @@ export function Projects() {
 
               <div className="mt-auto pt-7">
                 <p className="text-[0.87rem] leading-relaxed text-mist">
-                  Explore our repositories, review our implementations, and follow the development
-                  of our research systems.
+                  We occasionally release small tools or libraries when they are broadly useful.
+                  For research collaborations and technical inquiries, get in touch.
                 </p>
                 <ButtonLink
-                  href={GITHUB_URL}
+                  href="#contact"
                   className="mt-4"
-                  icon={<IconGithub className="h-4 w-4" />}
                   iconRight={<IconArrowRight className="h-4 w-4" />}
                 >
-                  Explore GitHub
+                  Contact Us
                 </ButtonLink>
               </div>
             </article>
@@ -90,10 +89,9 @@ export function Projects() {
               </div>
 
               <p className="mt-4 text-[0.9rem] leading-relaxed text-mist">
-                Our research output includes technical reports, research implementations,
-                experimental studies, and, where appropriate, academic publications. We prioritize
-                methodological clarity, reproducibility, and honest evaluation over unsupported
-                performance claims.
+                Our research output includes technical reports, research notes, experimental
+                studies, and, where appropriate, academic publications. We prioritize methodological
+                clarity, reproducibility, and honest evaluation over unsupported performance claims.
               </p>
 
               <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.24em] text-mist">

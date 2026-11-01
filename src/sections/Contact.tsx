@@ -1,7 +1,7 @@
-import { CONTACT_URL, GITHUB_URL, LINKEDIN_URL } from '../config/site'
+import { CONTACT_URL, LINKEDIN_URL } from '../config/site'
 import { ButtonLink } from '../components/Button'
 import { Reveal } from '../components/Reveal'
-import { IconGithub, IconLinkedin, IconMail } from '../components/icons'
+import { IconLinkedin, IconMail } from '../components/icons'
 
 /** Disabled placeholder button for channels that don't exist yet. */
 function SoonButton({ label, icon }: { label: string; icon: React.ReactNode }) {
@@ -30,37 +30,34 @@ export function Contact() {
               Get in Touch
             </h2>
             <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.28em] text-signal">
-              Explore · Research · Build
+              Explore · Research · Connect
             </p>
           </Reveal>
 
           <Reveal delay={80}>
             <div className="mt-7 space-y-4 text-pretty text-[0.98rem] leading-relaxed text-mist">
               <p>
-                We welcome conversations with researchers, engineers, and developers interested in
-                AI, quantitative finance, digital assets, and open-source financial technology.
+                We welcome conversations with researchers, engineers, and institutions interested
+                in AI, quantitative finance, and modern financial markets — including crypto,
+                prediction markets, forex, and gold.
               </p>
               <p>
                 If you are exploring related research questions, building relevant tools, or
                 interested in technical collaboration, we would be glad to connect.
               </p>
               <p className="font-medium text-fog">
-                Follow our work, explore our projects, and join us in investigating the next
-                generation of financial research systems.
+                Follow our work and reach out to discuss research, engineering, or partnership
+                opportunities.
               </p>
             </div>
           </Reveal>
 
           <Reveal delay={160}>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-              <ButtonLink href={GITHUB_URL} size="lg" icon={<IconGithub className="h-4 w-4" />}>
-                GitHub
-              </ButtonLink>
               {LINKEDIN_URL ? (
                 <ButtonLink
                   href={LINKEDIN_URL}
                   size="lg"
-                  variant="secondary"
                   icon={<IconLinkedin className="h-4 w-4" />}
                 >
                   LinkedIn

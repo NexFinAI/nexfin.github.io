@@ -16,8 +16,8 @@ const PILLARS: Pillar[] = [
     icon: IconCpu,
   },
   {
-    title: 'DeFi & On-Chain',
-    body: 'Understanding the mechanisms behind digital asset markets.',
+    title: 'Cross-Market Intelligence',
+    body: 'Crypto, prediction markets, forex, and gold.',
     icon: IconHex,
   },
   {
@@ -42,8 +42,9 @@ export function About() {
           <Reveal delay={80}>
             <div className="space-y-5 text-pretty text-[1rem] leading-relaxed text-fog">
               <p>
-                NexfinAI is an independent research and engineering initiative at the intersection
-                of artificial intelligence, quantitative finance, and digital asset markets.
+                NexfinAI is an independent quantitative research and technology firm at the
+                intersection of artificial intelligence, quantitative finance, and modern financial
+                markets — with a current focus on crypto, prediction markets, forex, and gold.
               </p>
               <p>
                 We aim to make financial research more systematic, reproducible, and scalable by
@@ -51,8 +52,9 @@ export function About() {
                 experimentation.
               </p>
               <p>
-                We share our work through open-source software, technical reports, research
-                implementations, and experimental findings — with a long-term direction of bridging
+                Our core research and trading systems are developed in-house. We share selected
+                findings through technical reports and research notes, and occasionally release
+                tooling when it is broadly useful — with a long-term direction of bridging
                 fundamental research and practical trading systems.
               </p>
             </div>

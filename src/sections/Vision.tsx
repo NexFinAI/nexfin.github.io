@@ -35,7 +35,8 @@ export function Vision() {
                 <p className="text-mist">
                   NexfinAI aims to contribute to this future by developing research systems that
                   connect scientific investigation, software engineering, and practical applications
-                  in digital asset markets.
+                  across global financial markets — with a current focus on crypto, prediction
+                  markets, forex, and gold.
                 </p>
                 <p className="text-mist">
                   Our long-term direction is to bridge fundamental research and systematic trading
